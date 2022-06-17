@@ -5,7 +5,7 @@ import urllib.error
 from bs4 import BeautifulSoup
 import numpy as np
 
-# Part 1: 由財政部官網爬取最新一期及上期之發票中獎號碼並印出
+# Part 1: 由財政部官網爬取本期及上期之發票中獎號碼並印出
 pages = ["index.html","lastNumber.html"]  # 本期及上期分頁
 
 for i in range(2):
@@ -27,7 +27,7 @@ for i in range(2):
             "特獎": results[1],
             "頭獎": results[2:5]
         }
-        print ("最新一期統一發票開獎號碼 ({0})：".format(month_now[:-5]))
+        print ("本期統一發票開獎號碼 ({0})：".format(month_now[:-5]))
         print(num_now)
     
     else:
